@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://iiabqxe7qhtn"]
+
+[ext_resource type="Script" uid="uid://cx0f7rn2a6ygh" path="res://button.gd" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=2040585052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1257990340]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060000002
+anchor_top = 0.33800003
+anchor_right = 0.060000002
+anchor_bottom = 0.33800003
+offset_left = 237.88
+offset_top = 5.9759827
+offset_right = 475.88
+offset_bottom = 106.97598
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=44925164]
+layout_mode = 2
+text = "Start"
+script = ExtResource("1_0fbet")
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1988501472]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=322268074]
+layout_mode = 2
+text = "Exit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1438836025]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 63.0
+offset_right = 505.0
+offset_bottom = 103.0
+text = "Retribution"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer/Start" method="_on_exit_pressed"]

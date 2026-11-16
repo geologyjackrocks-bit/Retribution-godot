@@ -1,33 +1,56 @@
-[gd_scene format=3 uid="uid://6jbrj3p8mfrc"]
+[gd_scene format=3 uid="uid://v3r63rqkq3pe"]
 
-[ext_resource type="Script" uid="uid://3nqgct4qljk6" path="res://playerMovement.gd" id="1_0f027"]
+[ext_resource type="Script" uid="uid://mh11diqmeu6n" path="res://character_body_2d.gd" id="1_gyfs4"]
 [ext_resource type="Texture2D" uid="uid://b7vnxdy3m863h" path="res://icon.svg" id="2_2c62f"]
+[ext_resource type="Texture2D" uid="uid://clu4po6lenlnk" path="res://pixil-frame-0 (21).png" id="3_d5x1h"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cxy6"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kdf6o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cxy6"]
-size = Vector2(1156, 78)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpj17"]
+size = Vector2(868, 20)
 
-[node name="mainScene" type="Node2D" unique_id=1328532176]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r3fl7"]
+texture = ExtResource("3_d5x1h")
+texture_region_size = Vector2i(1, 1)
+3:0/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+2:0/0 = 0
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=512401880]
-position = Vector2(306, -151)
-script = ExtResource("1_0f027")
+[sub_resource type="TileSet" id="TileSet_bp1ev"]
+tile_size = Vector2i(1, 1)
+sources/1 = SubResource("TileSetAtlasSource_r3fl7")
+
+[node name="Node2D" type="Node2D" unique_id=439986160]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1430633823]
+position = Vector2(472, 302)
+script = ExtResource("1_gyfs4")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=481211256]
-position = Vector2(1, -1)
-shape = SubResource("CapsuleShape2D_1cxy6")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1008267083]
+shape = SubResource("CapsuleShape2D_kdf6o")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1526950502]
-position = Vector2(1, 4)
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1443141176]
-position = Vector2(0, -2)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=2036524572]
+position = Vector2(1.66893e-06, -1.4275312e-05)
+scale = Vector2(0.15624966, 0.2343751)
 texture = ExtResource("2_2c62f")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=885495562]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2037479417]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1543817650]
-position = Vector2(579, -44)
-shape = SubResource("RectangleShape2D_1cxy6")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=131997674]
+position = Vector2(174, 616)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1640249281]
+position = Vector2(308, 0)
+shape = SubResource("RectangleShape2D_hpj17")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=541012845]
+position = Vector2(308.00006, 1.41859055e-05)
+scale = Vector2(6.7812505, 0.15625003)
+texture = ExtResource("2_2c62f")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=276876884]
+scale = Vector2(16, 16)
+tile_set = SubResource("TileSet_bp1ev")

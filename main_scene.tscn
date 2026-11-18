@@ -14,17 +14,20 @@ texture = ExtResource("3_d5x1h")
 texture_region_size = Vector2i(1, 1)
 3:0/0 = 0
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5)
+1:0/0/custom_data_0 = true
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5)
 2:0/0 = 0
+2:0/0/custom_data_1 = true
 
 [sub_resource type="TileSet" id="TileSet_bp1ev"]
 tile_size = Vector2i(1, 1)
 physics_layer_0/collision_layer = 1
 custom_data_layer_0/name = "Deathbrick"
-custom_data_layer_0/type = 0
+custom_data_layer_0/type = 1
 custom_data_layer_1/name = "Breakable"
-custom_data_layer_1/type = 0
+custom_data_layer_1/type = 1
 sources/1 = SubResource("TileSetAtlasSource_r3fl7")
 
 [node name="Node2D" type="Node2D" unique_id=439986160]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clu4po6lenlnk"
-path="res://.godot/imported/pixil-frame-0 (21).png-67b954ecf2e111387120278e1c544d62.ctex"
+uid="uid://dapqafjxjxjgs"
+path="res://.godot/imported/soulbar.png-8d7a6c45f4c11b1da5389d7365d13830.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0 (21).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (21).png-67b954ecf2e111387120278e1c544d62.ctex"]
+source_file="res://soulbar.png"
+dest_files=["res://.godot/imported/soulbar.png-8d7a6c45f4c11b1da5389d7365d13830.ctex"]
 
 [params]
 

@@ -9,13 +9,13 @@ var can_dash = true
 var dash_dir = 1.0
 var facing =1.0
 
+
 @onready var sprite = $Sprite2D
 @onready var base_scale = sprite.scale   # (0.156, 0.234)
 
 
 var speed = 300
 const jump_velocity= -400.0
-var is_smashing = false
 var cyote = 0
 func cyote_frame() -> void:
 	if is_on_floor():
@@ -29,7 +29,6 @@ func cyote_frame() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	cyote_frame()
-	$var_lable.text = str(cyote)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

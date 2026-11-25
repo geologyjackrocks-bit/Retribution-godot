@@ -39,7 +39,7 @@ func soul_bar() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	cyote_frame()
-	$var_lable.text = str(soul)
+	# $var_lable.text = str(soul)
 	if not is_on_floor() and not is_dashing:
 		velocity += get_gravity() * delta
 
@@ -63,6 +63,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	
 	direction = Input.get_axis("Left", "Right")
 	if direction:
 		velocity.x = direction * speed
